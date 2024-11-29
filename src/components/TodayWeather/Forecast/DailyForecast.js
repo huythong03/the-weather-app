@@ -29,8 +29,8 @@ const DailyForecast = ({ data, forecastList }) => {
         }}
       >
         {forecastList.length === 1
-          ? '1 available forecast'
-          : `${forecastList.length} available forecasts`}
+          ? '1 dự báo có sẵn'
+          : `${forecastList.length} dự báo có sẵn`}
       </Typography>
     );
 
@@ -76,13 +76,13 @@ const DailyForecast = ({ data, forecastList }) => {
         flex="1"
         type="info"
         margin="2rem auto"
-        errorMessage="No available forecasts for tonight."
+        errorMessage="Không có dự báo cho đêm nay."
       />
     );
 
   return (
     <Layout
-      title="TODAY'S FORECAST"
+      title="DỰ BÁO HÔM NAY"
       content={content}
       sectionSubHeader={subHeader}
       sx={{ marginTop: '2.9rem' }}

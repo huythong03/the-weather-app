@@ -1,9 +1,9 @@
 import { Typography } from '@mui/material';
 import React from 'react';
-import { getVietnamDatetime } from '../../utilities/DatetimeUtils';
+import { getVietNamDatetime } from '../../utilities/DatetimeUtils';
 
-const VietnamDatetime = () => {
-  const vietnamFullDate = getVietnamDatetime();
+const VietNamDatetime = () => {
+  const vietnamFullDate = getVietNamDatetime();
   const vietnamTimeValue = (
     <Typography
       variant="h3"
@@ -23,4 +23,4 @@ const VietnamDatetime = () => {
   return vietnamTimeValue;
 };
 
-export default VietnamDatetime;
+export default VietNamDatetime;

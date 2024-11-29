@@ -5,7 +5,7 @@ import WeeklyForecast from './components/WeeklyForecast/WeeklyForecast';
 import TodayWeather from './components/TodayWeather/TodayWeather';
 import { fetchWeatherData } from './api/OpenWeatherService';
 import { transformDateFormat } from './utilities/DatetimeUtils';
-import VietnamDatetime from './components/Reusable/VietnamDatetime';
+import VietNamDatetime from './components/Reusable/VietNamDatetime';
 import LoadingBox from './components/Reusable/LoadingBox';
 import { ReactComponent as SplashIcon } from './assets/splash-icon.svg';
 import Logo from './assets/logo.png';
@@ -115,7 +115,7 @@ function App() {
       <ErrorBox
         margin="3rem auto"
         flex="inherit"
-        errorMessage="Something went wrong"
+        errorMessage="Đã xảy ra sự cố"
       />
     );
   }
@@ -189,7 +189,7 @@ function App() {
               src={Logo}
             />
 
-            <VietnamDatetime />
+            <VietNamDatetime />
             <Link
               href="https://github.com/huythong03"
               target="_blank"

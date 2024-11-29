@@ -127,7 +127,7 @@ const WeeklyForecast = ({ data }) => {
 
   return (
     <Layout
-      title="WEEKLY FORECAST"
+      title="DỰ BÁO HÀNG TUẦN"
       content={content}
       mb=".8rem"
       sx={{

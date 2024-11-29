@@ -7,7 +7,7 @@ export function getWeekDays() {
   const days = DAYS.slice(dayInAWeek, DAYS.length).concat(
     DAYS.slice(0, dayInAWeek)
   );
-  return days.map(day => day.charAt(0).toUpperCase() + day.slice(1)); // Adjust capitalization as needed
+  return days.map(day => day.charAt(0).toUpperCase() + day.slice(1)); // Điều chỉnh viết hoa nếu cần
 }
 
 export function getDayMonthFromDate() {
@@ -33,7 +33,7 @@ export function transformDateFormat() {
   return newFormatDate;
 }
 
-export function getVietnamDatetime() {
+export function getVietNamDatetime() {
   const vnTime = date.toLocaleString('vi-VN', {
     hour: '2-digit',
     minute: '2-digit',
@@ -46,7 +46,7 @@ export function getVietnamDatetime() {
   return vnDate;
 }
 
-export function getVietnamTime() {
+export function getVietNamTime() {
   const vnTime = date.toLocaleString('vi-VN', {
     hour: '2-digit',
     minute: '2-digit',
