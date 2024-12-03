@@ -1,15 +1,10 @@
-const GEO_API_URL = 'https://wft-geo-db.p.rapidapi.com/v1/geo';
-// Lấy thông tin về các thành phố có dân số trên 10,000 người {API được lưu trữ trên RapidAPI}
-
 const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5';
-// API này dùng để lấy dữ liệu thời tiết như thời tiết hiện tại và dự báo {API được lưu trên OpenWeatherMap}
-
 const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-
+const GEO_API_URL = 'https://wft-geo-db.p.rapidapi.com/v1/geo';
 const GEO_API_OPTIONS = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '4f0dcce84bmshac9e329bd55fd14p17ec6fjsnff18c2e61917',
+    'X-RapidAPI-Key': 'f17db850fcmshd4456c77387ed8fp1917ddjsnece63a269cbe',
     'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
   },
 };
@@ -18,7 +13,7 @@ export async function fetchWeatherData(lat, lon) {
   try {
     let [weatherPromise, forcastPromise] = await Promise.all([
       fetch(
-        `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+        `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&lang=vi&appid=${WEATHER_API_KEY}&units=metric`
       ),
       fetch(
         `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
